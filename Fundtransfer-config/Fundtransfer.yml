@@ -1,0 +1,43 @@
+spring: 
+  api: 
+    corporatecurrentaccount: 
+      context-path: /CurrentAccount/Initiate
+      hosturl: v1/bian-3/core/payment/debitor/10.0.0/
+      jolt-filename: CorporateCurrentAccount378132-jolt.json
+    financialgateway: 
+      context-path: /FinancialGateway/Initiate
+      hosturl: v1/bian-3/core/payment/debitor/10.0.0/
+      jolt-filename: FinancialGateway716167-jolt.json
+    fraudevalution: 
+      context-path: /FraudEvaluation/Evaluate
+      hosturl: v1/bian-3/core/payment/debitor/10.0.0/
+      jolt-filename: FraudEvalution774947-jolt.json
+    partyreferencedatadirectory: 
+      context-path: /PartyReferenceDataDirectory/{partyreferencedatadirectoryId}/Retrieve
+      hosturl: v1/bian-3/core/payment/debitor/10.0.0/
+      jolt-filename: PartyReferenceDatadirectory977578-jolt.json
+    paymentexecution: 
+      context-path: /PaymentExecution/Initiate
+      hosturl: v1/bian-3/core/payment/debitor/10.0.0/
+      jolt-filename: PaymentExecution659701-jolt.json
+    paymentinitiation: 
+      context-path: /PaymentInitiation/Initiate
+      hosturl: v1/bian-3/core/payment/debitor/10.0.0/
+      jolt-filename: PaymentInitiation925332-jolt.json
+    paymentorder: 
+      context-path: /PaymentOrder/Initiate
+      hosturl: v1/bian-3/core/payment/debitor/10.0.0/
+      jolt-filename: PaymentOrder495122-jolt.json
+    paymentrailoperations: 
+      context-path: /PaymentRailOperations/Initiate
+      hosturl: v1/bian-3/core/payment/debitor/10.0.0/
+      jolt-filename: PaymentRailOperations201186-jolt.json
+    regulatorycompliance: 
+      context-path: /RegulatoryCompliance/Evaluate
+      hosturl: v1/bian-3/core/payment/debitor/10.0.0/
+      jolt-filename: RegulatoryCompliance944694-jolt.json
+  datasource: 
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: ${mysql_pwd}
+    url: jdbc:mysql://${mysql_url}:3306/camunda
+    username: ${mysql_user}
